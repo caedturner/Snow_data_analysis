@@ -48,7 +48,7 @@ ORDER BY total_snowfall);
 
 SELECT * FROM tiffindell_min_months_snowfall;
 
--- Finding Out and creating tables for which months in zermatt had snowfall
+-- Finding Out and creating tables for which months in Tiffindell had snowfall
 CREATE TABLE snowfall_months_tiffindell AS(
 SELECT
   EXTRACT(year FROM dt) AS year,
@@ -61,7 +61,7 @@ ORDER BY year);
 
 SELECT * FROM snowfall_months_tiffindell;
 
--- Finding and creating table for total snowfall per year in Zermatt
+-- Finding and creating table for total snowfall per year in Tiffindell
 CREATE TABLE tiffindell_snowfall_per_year AS(
 SELECT
   EXTRACT(year FROM dt) AS year,
@@ -72,7 +72,7 @@ ORDER BY year);
 
 SELECT * FROM tiffindell_snowfall_per_year;
 
--- Finding and creating table for total snowfall since 1990 in Zermatt
+-- Finding and creating table for total snowfall since 1990 in Tiffindell
 CREATE TABLE total_snowfall_tiffindell AS (
 SELECT
   SUM(snowfall) AS total_snowfall
