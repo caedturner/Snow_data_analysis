@@ -37,14 +37,17 @@ def results():
           snowing = ""
           print(predictions)
           if predictions[0] == 0:
-               snowing = "No snow today!"
+               snowing = "not snowing!"
           elif predictions[0] == 1:
-               snowing = "It is snowing."
-          predictions_text='Is it snowing? {}'.format(snowing)
-          print(predictions_text)
+               snowing = "SNOWING!"
+          predictions_text='It is... {}'.format(snowing)
+          #print(predictions_text)
 
-          return render_template('results.html', predictions_text='Is it snowing? {}'.format(snowing))
+          return render_template('results.html', predictions_text='It is {}'.format(snowing))
 
+@app.route('/viz')
+def viz():
+     return render_template('viz.html')
 
 if __name__ == '__main__':
      app.run(debug=True)
