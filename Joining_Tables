@@ -1,0 +1,42 @@
+-- Creating Snowfall Per Year for Northern Hemisphere Table
+SELECT furano_snowfall_per_year.year AS Year,
+	timberline_snowfall_per_year.total_snowfall AS Timberline_Snowfall,
+	furano_snowfall_per_year.total_snowfall AS Furano_Snowfall,
+	zermatt_snowfall_per_year.total_snowfall  AS Zermatt_Snowfall
+INTO North_Hemi_Snowfall
+FROM furano_snowfall_per_year
+JOIN timberline_snowfall_per_year
+ON timberline_snowfall_per_year.year = furano_snowfall_per_year.year
+JOIN zermatt_snowfall_per_year
+ON timberline_snowfall_per_year.year = zermatt_snowfall_per_year.year;
+
+SELECT * FROM North_Hemi_Snowfall;
+
+-- Creating Snowfall Per Year for Southern Hemisphere Table
+SELECT valle_nevado_snowfall_per_year.year AS Year,
+	tiffindell_snowfall_per_year.total_snowfall AS tiffindell_Snowfall,
+	valle_nevado_snowfall_per_year.total_snowfall AS Valle_Nevado_Snowfall,
+	craigieburn_snowfall_per_year.total_snowfall  AS craigieburn_Snowfall
+INTO South_Hemi_Snowfall
+FROM valle_nevado_snowfall_per_year
+JOIN tiffindell_snowfall_per_year
+ON tiffindell_snowfall_per_year.year = valle_nevado_snowfall_per_year.year
+JOIN craigieburn_snowfall_per_year
+ON tiffindell_snowfall_per_year.year = craigieburn_snowfall_per_year.year;
+
+SELECT * FROM South_Hemi_Snowfall;
+
+-- Creating Snowfall Per Year for Both Hemisphere Table
+SELECT North_Hemi_Snowfall.year,
+	North_Hemi_Snowfall.Timberline_Snowfall,
+	North_Hemi_Snowfall.Furano_Snowfall,
+	North_Hemi_Snowfall.Zermatt_Snowfall,
+	South_Hemi_Snowfall.tiffindell_Snowfall,
+	South_Hemi_Snowfall.Valle_Nevado_Snowfall,
+	South_Hemi_Snowfall.craigieburn_Snowfall
+INTO Ski_Resort_Snowfall_Per_Year
+FROM South_Hemi_Snowfall
+JOIN North_Hemi_Snowfall
+ON North_Hemi_Snowfall.year = South_Hemi_Snowfall.year;
+
+SELECT * FROM Ski_Resort_Snowfall_Per_Year;
