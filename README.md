@@ -49,3 +49,79 @@ to do this we used resample() and performed aggregates on the remaining columns:
 * humidity : mean
 * snow_1h : sum
 Finally we set our resampled dt column as the index and renamed the column snow_1h snowfall.
+
+## Export CSV to SQL
+Export finished date frame to csv as cleaned file to postgres. Connect database (db_string) to postgresql as a f string from snow_data. Create a database engine to connnect to prostgres using the db_string. Once string is connect to engine, push finished database to sql. 
+
+## Entity Relationship Diagram
+Entity relationship diagram provide a visual staring point for database desgin that can also be used to help determine information system requirements. Using all countries (3 southern and 3 nothern hemispheres) to show relationships between the date time (dt).
+
+## SQL Database
+* Max snowfall per year
+* Maxiumn snowfall in a signal day per each year for all countries.
+  - Extract year from dt (date time)
+  - Group by year
+  - Order by  year Asc
+*Only have days where snowfall is > 0
+  - Use where clause 
+* Average snowfall per year
+  -	Extract year from date
+  -	Avg snowfall
+  -	Group by year
+  - Order by year ASC
+
+## Max and Min POW days (6+ inches)
+*	Max pow days set to more than or equal to 6+ inches
+  -	Extract year from date as count
+  -	Extract year from date where snowfall is great than 6+
+  -	Group by extracted year
+*	Min pow days set to less than or equal to 6 inches
+  -	Extract year from date as count
+  -	Extract year from date where snowfall is less than 6
+  -	Group by extracted year
+
+## For total snowfall in a month per each year 
+*	Snowfall per month
+  -	Extract year from date
+  -	Extract month from date
+	- Add (SUM) snowfall as total_snowfall
+	- Group by year, month
+	- Order by year ASC
+*	Max month snowfall 
+  -	HAVING SUM (snowfall) greater to 0
+  - Order by total snowfall DESC
+
+* Finding and creating tables for which months had snowfall   
+* Finding and creating which months had the least snowfall > 0
+  - Extract frim dt
+  - Extract from month
+  - Sum to equal total snowfall
+  - Group by year/month have sum snowfall greater 0
+  - Order by total snowfall
+
+## Snowfall per year
+
+
+## Pow Days (6+ inches) Per Year
+
+
+## Total Snowfall Since 1990 (as inches)
+
+
+## Deepest Snowfall (in a single day) Per Each Year
+
+
+## Snowfalll by Week (encompassing since 1990)
+
+
+## Snowfall Per Month (encompassing since 1990)
+
+
+
+
+
+
+
+
+
+
