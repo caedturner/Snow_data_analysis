@@ -62,7 +62,7 @@ Entity relationship diagram provide a visual staring point for database desgin t
   - Extract year from dt (date time)
   - Group by year
   - Order by  year Asc
-*Only have days where snowfall is > 0
+* Only have days where snowfall is > 0
   - Use where clause 
 * Average snowfall per year
   -	Extract year from date
@@ -71,24 +71,24 @@ Entity relationship diagram provide a visual staring point for database desgin t
   - Order by year ASC
 
 ## Max and Min POW days (6+ inches)
-*	Max pow days set to more than or equal to 6+ inches
-  -	Extract year from date as count
-  -	Extract year from date where snowfall is great than 6+
-  -	Group by extracted year
-*	Min pow days set to less than or equal to 6 inches
-  -	Extract year from date as count
-  -	Extract year from date where snowfall is less than 6
-  -	Group by extracted year
+* Max pow days set to more than or equal to 6+ inches
+  - Extract year from date as count
+  - Extract year from date where snowfall is great than 6+
+  - Group by extracted year
+* Min pow days set to less than or equal to 6 inches
+  - Extract year from date as count
+  - Extract year from date where snowfall is less than 6
+  - Group by extracted year
 
 ## For total snowfall in a month per each year 
-*	Snowfall per month
-  -	Extract year from date
-  -	Extract month from date
-	- Add (SUM) snowfall as total_snowfall
-	- Group by year, month
-	- Order by year ASC
-*	Max month snowfall 
-  -	HAVING SUM (snowfall) greater to 0
+* Snowfall per month
+  - Extract year from date
+  - Extract month from date
+  - Add (SUM) snowfall as total_snowfall
+- Group by year, month
+- Order by year ASC
+* Max month snowfall 
+  - HAVING SUM (snowfall) greater to 0
   - Order by total snowfall DESC
 
 * Finding and creating tables for which months had snowfall   
@@ -100,13 +100,13 @@ Entity relationship diagram provide a visual staring point for database desgin t
   - Order by total snowfall
 
 ## Snowfall per year
-
+Separtated  countries by southern (bottom of graph) and northern (top of graph) hemispheres to show snowfall trends during the year. Southern countries have the least amount of snowfall per year, except for Valle Nevado with the highest snowfall in 1997. Tiffindell shows little to no snowfall throughout 1991-2021, which found the county ,makes most of there snow. Northern countries have more snowfall per year, where Timberline have the highest in 2021.
 
 ## Pow Days (6+ inches) Per Year
-
+The northen countries have more powder days per year than southern countries. Highest powder day in the northern hemisphere is Timberline at 100 inches back in 2021. The higest powder day in the souther hemisphere is Valle Nevado  at 50 back in 1997. Tiffindell snows no signs of improvement.
 
 ## Total Snowfall Since 1990 (as inches)
-
+Compare southern and northern hemipshere total snowfall since 1990. Bar graph shows majority of northen countries are in the top amount of snowfall since 1990. Northen countries consistantly have more snowfall than southern hemisphere.
 
 ## Deepest Snowfall (in a single day) Per Each Year
 
