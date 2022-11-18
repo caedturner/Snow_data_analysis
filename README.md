@@ -106,16 +106,16 @@ Separtated  countries by southern (bottom of graph) and northern (top of graph) 
 The northen countries have more powder days per year than southern countries. Highest powder day in the northern hemisphere is Timberline at 100 inches back in 2021. The higest powder day in the souther hemisphere is Valle Nevado  at 50 back in 1997. Tiffindell snows no signs of improvement.
 
 ## Total Snowfall Since 1990 (as inches)
-Compare southern and northern hemipshere total snowfall since 1990. Bar graph shows majority of northen countries are in the top amount of snowfall since 1990. Northen countries consistantly have more snowfall than southern hemisphere.
+Compare southern and northern hemipshere total snowfall since 1990. Bar graph shows majority of northen countries are in the top snowfall since 1990. 
 
 ## Deepest Snowfall (in a single day) Per Each Year
-
+Shown in graph, deepest snowfall in a single day by country. shown in previous graphys, Timberline (nothern) had the greats amount of snowfall since 1990. even through timberline had the great amount of snowfall they lack the amount of snow deepest. The deepest snowfall is Zermatt back in 2012. All southern hemisphers have the lowest amount of snow deepest. 
 
 ## Snowfalll by Week (encompassing since 1990)
-
+As shown in graph, amount of snowfall by week (2-53). The weeks of the year corrisponds to the months where the best tiem of the year to hit the slops.  For northen, the best time would be weeks 2-11 then 50-53. Fot the southern, weeks 23 - 38. The hemisphers are oposite seasons.  Northen hemisphers tend to pack more snowfall compared to southern hemisphers.  
 
 ## Snowfall Per Month (encompassing since 1990)
-
+Graph shows  snowfalls per month (January - December), during the months of December and January to be peack for northen hemisphers. Where southern hemisphers peak times are July and June. The hemispheres show the change in season where snowfall is best for shreding the mountain.
 
 
 
