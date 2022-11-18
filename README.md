@@ -85,7 +85,7 @@ Entity relationship diagram provide a visual starting point for database design 
   -	Extract year from date
   -	Extract month from date
 #### Add (SUM) snowfall as total_snowfall
-	 - Group by year, month
+  -     Group by year, month
   -	Order by year ASC
 #### Max month snowfall
   -	HAVING SUM (snowfall) greater to 0
