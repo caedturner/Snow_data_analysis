@@ -51,71 +51,70 @@ to do this we used resample() and performed aggregates on the remaining columns:
 Finally we set our resampled dt column as the index and renamed the column snow_1h snowfall.
 
 ## Export CSV to SQL
-Export finished date frame to csv as cleaned file to postgres. Connect database (db_string) to postgresql as a f string from snow_data. Create a database engine to connnect to prostgres using the db_string. Once string is connect to engine, push finished database to sql. 
+Export finished date frame to csv as cleaned file to postgres. Connect database (db_string) to PostgreSQL as a f string from snow_data. Create a database engine to connect to PostgreSQL using the db_string. Once string is connected to engine, push finished database to SQL.
 
 ## Entity Relationship Diagram
-Entity relationship diagram provide a visual staring point for database desgin that can also be used to help determine information system requirements. Using all countries (3 southern and 3 nothern hemispheres) to show relationships between the date time (dt).
+Entity relationship diagram provide a visual starting point for database design that can also be used to help determine information system requirements. Using all countries (3 southern and 3 northern hemispheres) to show relationships between the date time (dt).
 
 ## SQL Database
-* Max snowfall per year
-* Maxiumn snowfall in a signal day per each year for all countries.
-  - Extract year from dt (date time)
-  - Group by year
-  - Order by  year Asc
-* Only have days where snowfall is > 0
-  - Use where clause 
-* Average snowfall per year
-  -	Extract year from date
-  -	Avg snowfall
-  -	Group by year
-  - Order by year ASC
+•	Max snowfall per year
+•	Maximum snowfall in a signal day per each year for all countries.
+  o	Extract year from dt (date time)
+  o	Group by year
+  o	Order by year Asc
+•	Only have days where snowfall is > 0
+  o	Use where clause
+•	Average snowfall per year
+  o	Extract year from date
+  o	Avg snowfall
+  o	Group by year
+  o	Order by year ASC
 
 ## Max and Min POW days (6+ inches)
-* Max pow days set to more than or equal to 6+ inches
-  - Extract year from date as count
-  - Extract year from date where snowfall is great than 6+
-  - Group by extracted year
-* Min pow days set to less than or equal to 6 inches
-  - Extract year from date as count
-  - Extract year from date where snowfall is less than 6
-  - Group by extracted year
-
-## For total snowfall in a month per each year 
-* Snowfall per month
-  - Extract year from date
-  - Extract month from date
-  - Add (SUM) snowfall as total_snowfall
-- Group by year, month
-- Order by year ASC
-* Max month snowfall 
-  - HAVING SUM (snowfall) greater to 0
-  - Order by total snowfall DESC
-
-* Finding and creating tables for which months had snowfall   
-* Finding and creating which months had the least snowfall > 0
-  - Extract frim dt
-  - Extract from month
-  - Sum to equal total snowfall
-  - Group by year/month have sum snowfall greater 0
-  - Order by total snowfall
+•	Max pow days set to more than or equal to 6+ inches
+  o	Extract year from date as count
+  o	Extract year from date where snowfall is great than 6+
+  o	Group by extracted year
+•	Min pow days set to less than or equal to 6 inches
+  o	Extract year from date as count
+  o	Extract year from date where snowfall is less than 6
+  o	Group by extracted year
+For total snowfall in a month per each year
+•	Snowfall per month
+  o	Extract year from date
+  o	Extract month from date
+  o	Add (SUM) snowfall as total_snowfall
+•	Group by year, month
+•	Order by year ASC
+•	Max month snowfall
+  o	HAVING SUM (snowfall) greater to 0
+  o	Order by total snowfall DESC
+•	Finding and creating tables for which months had snowfall
+•	Finding and creating which months had the least snowfall > 0
+  o	Extract from dt
+  o	Extract from month
+  o	Sum to equal total snowfall
+  o	Group by year/month have sum snowfall greater 0
+  o	Order by total snowfall
 
 ## Snowfall per year
-Separtated  countries by southern (bottom of graph) and northern (top of graph) hemispheres to show snowfall trends during the year. Southern countries have the least amount of snowfall per year, except for Valle Nevado with the highest snowfall in 1997. Tiffindell shows little to no snowfall throughout 1991-2021, which found the county ,makes most of there snow. Northern countries have more snowfall per year, where Timberline have the highest in 2021.
+Separated countries by southern (bottom of graph) and northern (top of graph) hemispheres to show snowfall trends during the year. Southern countries have the least amount of snowfall per year, except for Valle Nevado with the highest snowfall in 1997. Tiffindell shows little to no snowfall throughout 1991-2021, which found the county, makes most of their snow. Northern countries have more snowfall per year, where Timberline have the highest in 2021.
 
 ## Pow Days (6+ inches) Per Year
-The northen countries have more powder days per year than southern countries. Highest powder day in the northern hemisphere is Timberline at 100 inches back in 2021. The higest powder day in the souther hemisphere is Valle Nevado  at 50 back in 1997. Tiffindell snows no signs of improvement.
+The northern countries have more powder days per year than southern countries. Highest powder day in the northern hemisphere is Timberline at 100 inches back in 2021. The highest powder day in the southern hemisphere is Valle Nevado at 50 back in 1997. Tiffindell shows no signs of improvement.
 
 ## Total Snowfall Since 1990 (as inches)
-Compare southern and northern hemipshere total snowfall since 1990. Bar graph shows majority of northen countries are in the top snowfall since 1990. 
+Compare southern and northern hemispheres total snowfall since 1990. Bar graph shows majority of northern countries are in the top snowfall since 1990.
 
 ## Deepest Snowfall (in a single day) Per Each Year
-Shown in graph, deepest snowfall in a single day by country. shown in previous graphys, Timberline (nothern) had the greats amount of snowfall since 1990. even through timberline had the great amount of snowfall they lack the amount of snow deepest. The deepest snowfall is Zermatt back in 2012. All southern hemisphers have the lowest amount of snow deepest. 
+Shown in graph, deepest snowfall in a single day by country. shown in previous graphs, Timberline (northern) had the greats amount of snowfall since 1990. even through timberline had the great amount of snowfall they lack the amount of snow deepest. The deepest snowfall is Zermatt back in 2012. All southern hemispheres have the lowest amount of snow deepest.
 
-## Snowfalll by Week (encompassing since 1990)
-As shown in graph, amount of snowfall by week (2-53). The weeks of the year corrisponds to the months where the best tiem of the year to hit the slops.  For northen, the best time would be weeks 2-11 then 50-53. Fot the southern, weeks 23 - 38. The hemisphers are oposite seasons.  Northen hemisphers tend to pack more snowfall compared to southern hemisphers.  
+## Snowfall by Week (encompassing since 1990)
+As shown in graph, amount of snowfall by week (2-53). The week of the year corresponds to the months where the best time of the year to hit the slop. For northern, the best time would be weeks 2-11 then 50-53. For the southern, weeks 23 - 38. The hemispheres are opposite seasons. Northern hemispheres tend to pack more snowfall compared to southern hemispheres.
 
 ## Snowfall Per Month (encompassing since 1990)
-Graph shows  snowfalls per month (January - December), during the months of December and January to be peack for northen hemisphers. Where southern hemisphers peak times are July and June. The hemispheres show the change in season where snowfall is best for shreding the mountain.
+Graph shows snowfalls per month (January - December), during the months of December and January to be peak for northern hemispheres. Where southern hemispheres peak times are July and June. The hemispheres show the change in season where snowfall is best for shredding the mountain.
+
 
 
 
