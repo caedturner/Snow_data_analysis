@@ -57,8 +57,8 @@ Export finished date frame to csv as cleaned file to postgres. Connect database 
 Entity relationship diagram provide a visual starting point for database design that can also be used to help determine information system requirements. Using all countries (3 southern and 3 northern hemispheres) to show relationships between the date time (dt).
 
 ## SQL Database
-*	Max snowfall per year
-*	Maximum snowfall in a signal day per each year for all countries.
+#### Max snowfall per year
+#### Maximum snowfall in a signal day per each year for all countries.
   -	Extract year from dt (date time)
   -	Group by year
   -	Order by year Asc
@@ -71,27 +71,27 @@ Entity relationship diagram provide a visual starting point for database design 
   -	Order by year ASC
 
 ## Max and Min POW days (6+ inches)
-*	Max pow days set to more than or equal to 6+ inches
+#### Max pow days set to more than or equal to 6+ inches
   -	Extract year from date as count
   -	Extract year from date where snowfall is great than 6+
   -	Group by extracted year
-*	Min pow days set to less than or equal to 6 inches
+#### Min pow days set to less than or equal to 6 inches
   -	Extract year from date as count
   -	Extract year from date where snowfall is less than 6
   -	Group by extracted year
 
 ## For total snowfall in a month per each year
-*	Snowfall per month
+#### Snowfall per month
   -	Extract year from date
   -	Extract month from date
-*	Add (SUM) snowfall as total_snowfall
+#### Add (SUM) snowfall as total_snowfall
 	 - Group by year, month
   -	Order by year ASC
-*	Max month snowfall
+#### Max month snowfall
   -	HAVING SUM (snowfall) greater to 0
   -	Order by total snowfall DESC
-*	Finding and creating tables for which months had snowfall
-*	Finding and creating which months had the least snowfall > 0
+#### Finding and creating tables for which months had snowfall
+#### Finding and creating which months had the least snowfall > 0
   -	Extract from dt
   -	Extract from month
   -	Sum to equal total snowfall
