@@ -57,45 +57,45 @@ Export finished date frame to csv as cleaned file to postgres. Connect database 
 Entity relationship diagram provide a visual starting point for database design that can also be used to help determine information system requirements. Using all countries (3 southern and 3 northern hemispheres) to show relationships between the date time (dt).
 
 ## SQL Database
-•	Max snowfall per year
-•	Maximum snowfall in a signal day per each year for all countries.
-  o	Extract year from dt (date time)
-  o	Group by year
-  o	Order by year Asc
-•	Only have days where snowfall is > 0
-  o	Use where clause
-•	Average snowfall per year
-  o	Extract year from date
-  o	Avg snowfall
-  o	Group by year
-  o	Order by year ASC
+*	Max snowfall per year
+*	Maximum snowfall in a signal day per each year for all countries.
+  *	Extract year from dt (date time)
+  *	Group by year
+  *	Order by year Asc
+*	Only have days where snowfall is > 0
+  *	Use where clause
+*	Average snowfall per year
+  *	Extract year from date
+  *	Avg snowfall
+  *	Group by year
+  *	Order by year ASC
 
 ## Max and Min POW days (6+ inches)
-•	Max pow days set to more than or equal to 6+ inches
-  o	Extract year from date as count
-  o	Extract year from date where snowfall is great than 6+
-  o	Group by extracted year
-•	Min pow days set to less than or equal to 6 inches
-  o	Extract year from date as count
-  o	Extract year from date where snowfall is less than 6
-  o	Group by extracted year
+*	Max pow days set to more than or equal to 6+ inches
+  *	Extract year from date as count
+  *	Extract year from date where snowfall is great than 6+
+  *	Group by extracted year
+*	Min pow days set to less than or equal to 6 inches
+  *	Extract year from date as count
+  *	Extract year from date where snowfall is less than 6
+  *	Group by extracted year
 For total snowfall in a month per each year
-•	Snowfall per month
-  o	Extract year from date
-  o	Extract month from date
-  o	Add (SUM) snowfall as total_snowfall
-•	Group by year, month
-•	Order by year ASC
-•	Max month snowfall
-  o	HAVING SUM (snowfall) greater to 0
-  o	Order by total snowfall DESC
-•	Finding and creating tables for which months had snowfall
-•	Finding and creating which months had the least snowfall > 0
-  o	Extract from dt
-  o	Extract from month
-  o	Sum to equal total snowfall
-  o	Group by year/month have sum snowfall greater 0
-  o	Order by total snowfall
+*	Snowfall per month
+  *	Extract year from date
+  *	Extract month from date
+  *	Add (SUM) snowfall as total_snowfall
+*	Group by year, month
+*	Order by year ASC
+*	Max month snowfall
+  *	HAVING SUM (snowfall) greater to 0
+  *	Order by total snowfall DESC
+*	Finding and creating tables for which months had snowfall
+*	Finding and creating which months had the least snowfall > 0
+  *	Extract from dt
+  *	Extract from month
+  *	Sum to equal total snowfall
+  *	Group by year/month have sum snowfall greater 0
+  *	Order by total snowfall
 
 ## Snowfall per year
 Separated countries by southern (bottom of graph) and northern (top of graph) hemispheres to show snowfall trends during the year. Southern countries have the least amount of snowfall per year, except for Valle Nevado with the highest snowfall in 1997. Tiffindell shows little to no snowfall throughout 1991-2021, which found the county, makes most of their snow. Northern countries have more snowfall per year, where Timberline have the highest in 2021.
@@ -114,13 +114,3 @@ As shown in graph, amount of snowfall by week (2-53). The week of the year corre
 
 ## Snowfall Per Month (encompassing since 1990)
 Graph shows snowfalls per month (January - December), during the months of December and January to be peak for northern hemispheres. Where southern hemispheres peak times are July and June. The hemispheres show the change in season where snowfall is best for shredding the mountain.
-
-
-
-
-
-
-
-
-
-
