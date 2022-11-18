@@ -59,43 +59,44 @@ Entity relationship diagram provide a visual starting point for database design 
 ## SQL Database
 *	Max snowfall per year
 *	Maximum snowfall in a signal day per each year for all countries.
-  *	Extract year from dt (date time)
-  *	Group by year
-  *	Order by year Asc
+  -	Extract year from dt (date time)
+  -	Group by year
+  -	Order by year Asc
 *	Only have days where snowfall is > 0
-  *	Use where clause
+  -	Use where clause
 *	Average snowfall per year
-  *	Extract year from date
-  *	Avg snowfall
-  *	Group by year
-  *	Order by year ASC
+  -	Extract year from date
+  -	Avg snowfall
+  -	Group by year
+  -	Order by year ASC
 
 ## Max and Min POW days (6+ inches)
 *	Max pow days set to more than or equal to 6+ inches
-  *	Extract year from date as count
-  *	Extract year from date where snowfall is great than 6+
-  *	Group by extracted year
+  -	Extract year from date as count
+  -	Extract year from date where snowfall is great than 6+
+  -	Group by extracted year
 *	Min pow days set to less than or equal to 6 inches
-  *	Extract year from date as count
-  *	Extract year from date where snowfall is less than 6
-  *	Group by extracted year
-For total snowfall in a month per each year
+  -	Extract year from date as count
+  -	Extract year from date where snowfall is less than 6
+  -	Group by extracted year
+
+## For total snowfall in a month per each year
 *	Snowfall per month
-  *	Extract year from date
-  *	Extract month from date
-  *	Add (SUM) snowfall as total_snowfall
-*	Group by year, month
-*	Order by year ASC
+  -	Extract year from date
+  -	Extract month from date
+*	Add (SUM) snowfall as total_snowfall
+	 - Group by year, month
+  -	Order by year ASC
 *	Max month snowfall
-  *	HAVING SUM (snowfall) greater to 0
-  *	Order by total snowfall DESC
+  -	HAVING SUM (snowfall) greater to 0
+  -	Order by total snowfall DESC
 *	Finding and creating tables for which months had snowfall
 *	Finding and creating which months had the least snowfall > 0
-  *	Extract from dt
-  *	Extract from month
-  *	Sum to equal total snowfall
-  *	Group by year/month have sum snowfall greater 0
-  *	Order by total snowfall
+  -	Extract from dt
+  -	Extract from month
+  -	Sum to equal total snowfall
+  -	Group by year/month have sum snowfall greater 0
+  -	Order by total snowfall
 
 ## Snowfall per year
 Separated countries by southern (bottom of graph) and northern (top of graph) hemispheres to show snowfall trends during the year. Southern countries have the least amount of snowfall per year, except for Valle Nevado with the highest snowfall in 1997. Tiffindell shows little to no snowfall throughout 1991-2021, which found the county, makes most of their snow. Northern countries have more snowfall per year, where Timberline have the highest in 2021.
