@@ -102,6 +102,8 @@ Entity relationship diagram provide a visual starting point for database design 
   -	HAVING SUM (snowfall) greater to 0
   -	Order by total snowfall DESC
 
+![Screenshot_20221109_082756](https://user-images.githubusercontent.com/107443962/203212892-88f7bd8c-c85c-4809-86f3-ba5e286a884c.png)
+
 #### Finding and creating tables for which months had snowfall
 #### Finding and creating which months had the least snowfall > 0
   -	Extract from dt
@@ -109,9 +111,6 @@ Entity relationship diagram provide a visual starting point for database design 
   -	Sum to equal total snowfall
   -	Group by year/month have sum snowfall greater 0
   -	Order by total snowfall
-
-![Screenshot_20221109_082756](https://user-images.githubusercontent.com/107443962/203212892-88f7bd8c-c85c-4809-86f3-ba5e286a884c.png)
-
 
 <img width="989" alt="per_year_pow" src="https://user-images.githubusercontent.com/107443962/203212367-7df4cd76-2945-4ee1-b67b-bbcba1677666.png">
 
@@ -131,12 +130,10 @@ Shown in graph, deepest snowfall in a single day by country. shown in previous g
 
 <img width="903" alt="deepest_day" src="https://user-images.githubusercontent.com/107443962/203212148-24657371-db08-4c8b-8483-b80d3d4e25e1.png">
 
-
-<img width="993" alt="snowfall_week_month" src="https://user-images.githubusercontent.com/107443962/203212221-27f75ecc-e770-48b2-bac3-0215d5ea83f7.png">
-
 ## Snowfall by Week (encompassing since 1990)
 As shown in graph, amount of snowfall by week (2-53). The week of the year corresponds to the months where the best time of the year to hit the slop. For northern, the best time would be weeks 2-11 then 50-53. For the southern, weeks 23 - 38. The hemispheres are opposite seasons. Northern hemispheres tend to pack more snowfall compared to southern hemispheres.
 
 ## Snowfall Per Month (encompassing since 1990)
 Graph shows snowfalls per month (January - December), during the months of December and January to be peak for northern hemispheres. Where southern hemispheres peak times are July and June. The hemispheres show the change in season where snowfall is best for shredding the mountain.
 
+<img width="993" alt="snowfall_week_month" src="https://user-images.githubusercontent.com/107443962/203212221-27f75ecc-e770-48b2-bac3-0215d5ea83f7.png">
