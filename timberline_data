@@ -1,0 +1,81 @@
+-- Creating Timberline Table
+CREATE TABLE timberline (
+dt DATE NOT NULL,
+temperature DECIMAL NOT NULL,
+temp_min DECIMAL NOT NULL,
+temp_max DECIMAL NOT NULL,
+humidity DECIMAL NOT NULL,
+snowfall DECIMAL NOT NULL
+);
+
+SELECT * FROM timberline;
+
+-- Finding and creating table for total snowfall in a month per each year in timberline
+CREATE TABLE timberline_snowfall_per_month AS (
+SELECT
+  EXTRACT(year FROM dt) AS year,
+  EXTRACT(month FROM dt) AS month,
+  SUM(snowfall) AS total_snowfall
+FROM timberline
+GROUP BY year,month
+ORDER BY year ASC);
+
+SELECT * FROM timberline_snowfall_per_month;
+
+-- Finding and creating table for which months had the most snowfall in timberline
+CREATE TABLE timberline_max_months_snowfall AS (
+SELECT
+  EXTRACT(year FROM dt) AS year,
+  EXTRACT(month FROM dt) AS month,
+  SUM(snowfall) AS total_snowfall
+FROM timberline
+GROUP BY year,month
+HAVING SUM(snowfall)>0
+ORDER BY total_snowfall DESC);
+
+SELECT * FROM timberline_max_months_snowfall;
+
+-- Finding and creating which months had the the least snowfall but > 0
+CREATE TABLE timberline_min_months_snowfall AS (
+SELECT
+  EXTRACT(year FROM dt) AS year,
+  EXTRACT(month FROM dt) AS month,
+  SUM(snowfall) AS total_snowfall
+FROM timberline
+GROUP BY year,month
+HAVING SUM(snowfall)>0
+ORDER BY total_snowfall);
+
+SELECT * FROM timberline_min_months_snowfall;
+
+-- Finding Out and creating tables for which months in timberline had snowfall
+CREATE TABLE snowfall_months_timberline AS(
+SELECT
+  EXTRACT(year FROM dt) AS year,
+  EXTRACT(month FROM dt) AS month,
+  SUM(snowfall) AS total_snowfall
+FROM timberline
+GROUP BY year,month
+HAVING SUM(snowfall)>0
+ORDER BY year);
+
+SELECT * FROM snowfall_months_timberline;
+
+-- Finding and creating table for total snowfall per year in timberline
+CREATE TABLE timberline_snowfall_per_year AS(
+SELECT
+  EXTRACT(year FROM dt) AS year,
+  SUM(snowfall) AS total_snowfall
+FROM timberline
+GROUP BY year
+ORDER BY year);
+
+SELECT * FROM timberline_snowfall_per_year;
+
+-- Finding and creating table for total snowfall since 1990 in timberline
+CREATE TABLE total_snowfall_timberline AS (
+SELECT
+  SUM(snowfall) AS total_snowfall
+FROM timberline);
+
+SELECT * FROM total_snowfall_timberline;
