@@ -1,5 +1,9 @@
 # Snow_data_analysis
+### Presentation
+https://youtu.be/5Fe_WfsvnAQ
 ## Overview
+
+
 Analysis on snow data and trends since 1990 from six ski resorts around the world. Of these selected ski resorts three are located in the Northern Hemisphere and three are located in the Southern Hemisphere.
 The information we wanted to deduct from our analysis is as follows:
 * What resort experienced the most total snowfall since 1990
