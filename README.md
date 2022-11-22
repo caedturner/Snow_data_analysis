@@ -89,7 +89,7 @@ Entity relationship diagram provide a visual starting point for database design 
   -	Extract year from date where snowfall is less than 6
   -	Group by extracted year
 
-
+![Screenshot_20221121_073145](https://user-images.githubusercontent.com/107443962/203214786-1fdaee1b-1c04-4dae-8372-40d4ac844d4e.png)
 
 ## For total snowfall in a month per each year
 #### Snowfall per month
