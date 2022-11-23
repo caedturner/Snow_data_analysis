@@ -56,10 +56,9 @@ to do this we used resample() and performed aggregates on the remaining columns:
 * snow_1h : sum <br>
 ![After Cleaning](https://user-images.githubusercontent.com/107770394/203470931-ce2d25e2-54e8-4785-9aa2-8120f5af3514.png)
 <br>
-Finally we set our resampled dt column as the index and renamed the column snow_1h snowfall.<br>
-![Final2](https://user-images.githubusercontent.com/107770394/203471716-2b56997a-773d-4e63-a211-2a958b76c96f.png)
-<br>
+Finally we set our resampled dt column as the index and renamed the column snow_1h snowfall. <br>
 
+![Final2](https://user-images.githubusercontent.com/107770394/203471982-b7b7b35d-118e-4073-acf4-19a711e2559a.png)<br>
 
 ## Export CSV to SQL
 Export finished date frame to csv as cleaned file to postgres. Connect database (db_string) to PostgreSQL as a f string from snow_data. Create a database engine to connect to PostgreSQL using the db_string. Once string is connected to engine, push finished database to SQL.
