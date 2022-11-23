@@ -171,7 +171,10 @@ Looking at the Southern Hemisphere, with two of the three having less snowfall p
 Finally, in looking at all six at once, we found that there was a positive increase in snowfall per year.
 
 ## In Conclusion
-Work in progress…
+When starting this project, all three of us predicted that there was less snowfall per year now then there was back then. To our surprise, we found it quite the opposite, with more snowfall now than 30 years ago, at least with these six ski resorts.
+
+Something we could have done differently was not taking as many columns out during our cleaning process. When trying to create visualizations, we found that we may have taken to much data out, and limited ourselves with what we could visualize. We still were able to establish what we initially set out to, but we may have been able to do so much more if we gave ourselves more to work with.
+
 
 ## Citations
 We would like to thank Open Weather for providing us with the data presented for this project. The link to their website and API can be found here: https://home.openweathermap.org/history_bulks/new.
