@@ -144,3 +144,29 @@ As shown in graph, amount of snowfall by week (2-53). The week of the year corre
 ## Snowfall Per Month (encompassing since 1990)
 Graph shows snowfalls per month (January - December), during the months of December and January to be peak for northern hemispheres. Where southern hemispheres peak times are July and June. The hemispheres show the change in season where snowfall is best for shredding the mountain.
 
+The first thing we did for the machine learning aspect for this project was using the Random Forest to try and predict whether it will snow or not based on the data we have received. Looking back at our cleaned data set, as a reminder we have the date, the average temperature, the min and max temperature, humidity, and snowfall. In the case of predicting if it snows or not, the date, as well as the min and max temps are not important, so we went ahead and dropped those, leaving us with the average temperature and humidity. We then went ahead and changed the snowfall column to either 1 or 0, with one being it did snow vs 0 where it did not.
+
+## Machine Learning
+### Random Forests
+The first thing we did for the machine learning aspect for this project was using the Random Forest to try and predict whether it will snow or not based on the data we have received. Looking back at our cleaned data set, as a reminder we have the date, the average temperature, the min and max temperature, humidity, and snowfall. In the case of predicting if it snows or not, the date, as well as the min and max temps are not important, so we went ahead and dropped those, leaving us with the average temperature and humidity. We then went ahead and changed the snowfall column to either 1 or 0, with one being it did snow vs 0 where it did not.
+
+<img width="653" alt="confusion_matrix" src="https://user-images.githubusercontent.com/107770394/203467394-4f3bf718-ffdd-4595-8e3d-d10380b46e71.png">
+
+Through our random forest model, we were able to hash out 17,975 total predictions. Out of those, our test was correctly able to predict 2521 instances where it snowed, and 12,985 days where it did not. This led to an accuracy score of over 86%. Although it was not perfect, that is still a great score to have.  It also incorrectly predicted it not snowing 1221 times, and incorrectly predicted it snowing 1248 times.
+
+In terms or precision, when trying to predict it not snowing, our model predicted it to not snow 14,206 times. Since it correctly predicted 12,985 times, that led to a precision of 91%, which is excellent. However, the precision for trying to predict it not snowing is not as good. Our model predicted it to snow a total of 3769 times. It correctly predicted 2521 of those times, giving us a precision of 67%
+
+In terms of sensitivity, our results were fairly similar to our precision scores. Our sensitivity for not snowing, we had it correctly predict it 12,985, with a false negative of 1248 times, giving us a sensitivity of 91%. In terms of it snowing, it correctly predicted it 2521 times, with a false negative of 1221 times, giving us a sensitivity score of 67%.
+
+### Linear Regression
+We next wanted to find out if we can find a prediction of snowfall for each resort, then each hemisphere, then finally the world itself. Linear Regression was a great choice, as it creates a best fit line based on the data we created. So, we are inspecting the relationship between snowfall and years for each model. Out of the six ski resorts, four of them had an increase in snow per year, Furano, Zermatt, Timberline, and Tiffindell. The other two, Craigieburn and Valle Nevado, had a decrease in snow per year. <br>![North_Hemi_Prediction](https://user-images.githubusercontent.com/107770394/203467545-603a7f39-004a-4a57-8650-eb1f72ae0e10.png)<br>
+Looking at the Northern Hemisphere, each of them had a positive increase, so there was a positive increase in snowfall per year.<br>![South_Hemi_Prediction](https://user-images.githubusercontent.com/107770394/203467620-10ab98db-70cb-4d04-aa16-749f57fbc8a5.png) <br>
+Looking at the Southern Hemisphere, with two of the three having less snowfall per year, that led to our results having a negative relationship with snowfall per year.<br> ![Ski_Resorts_Predictions](https://user-images.githubusercontent.com/107770394/203467698-f199535d-a130-4acd-875d-110747205215.png)<br>
+Finally, in looking at all six at once, we found that there was a positive increase in snowfall per year.
+
+## In Conclusion
+Work in progress…
+
+## Citations
+We would like to thank Open Weather for providing us with the data presented for this project. The link to their website and API can be found here: https://home.openweathermap.org/history_bulks/new.
+
