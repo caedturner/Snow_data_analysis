@@ -43,7 +43,9 @@ Zermatt, Switzerland
 Timberline, Oregon
 
 ## Cleaning
-Starting Columns were dt, dt_iso, city-name, temp, temp_min, temp_, humidity, show_1h, weather_main, and weather_description.
+Starting Columns were dt, dt_iso, city-name, temp, temp_min, temp_, humidity, show_1h, weather_main, and weather_description amonst many others. In total, we had 27 different columns. <br>
+![Starting Columns](https://user-images.githubusercontent.com/107770394/203470017-b53a7041-2ee4-45ce-955b-3f1567691f78.png)
+<br>
 Of those columns we decided the columns of importance to our analysis were dt, temp, temp_min, temp_max, humidity and snow_1h. The columns deemed unimportant to our analysis were dropped.
 Our data was presented as a row for each hour of each day. This made our data harder to understand so the decision was made to resample the data from 24 hourly rows for each day as 1 daily row for each day.
 to do this we used resample() and performed aggregates on the remaining columns:
@@ -51,8 +53,13 @@ to do this we used resample() and performed aggregates on the remaining columns:
 * temp_min : mean
 * temp_max : mean
 * humidity : mean
-* snow_1h : sum
-Finally we set our resampled dt column as the index and renamed the column snow_1h snowfall.
+* snow_1h : sum <br>
+![After Cleaning](https://user-images.githubusercontent.com/107770394/203470931-ce2d25e2-54e8-4785-9aa2-8120f5af3514.png)
+<br>
+Finally we set our resampled dt column as the index and renamed the column snow_1h snowfall.<br>
+![Final2](https://user-images.githubusercontent.com/107770394/203471716-2b56997a-773d-4e63-a211-2a958b76c96f.png)
+<br>
+
 
 ## Export CSV to SQL
 Export finished date frame to csv as cleaned file to postgres. Connect database (db_string) to PostgreSQL as a f string from snow_data. Create a database engine to connect to PostgreSQL using the db_string. Once string is connected to engine, push finished database to SQL.
